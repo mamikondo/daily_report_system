@@ -96,6 +96,10 @@ button {
     text-align: center;
 }
 
+select {
+    height: 30px;
+}
+
 table#employee_list th {
     width: 30%;
     padding: 10px 2%;
