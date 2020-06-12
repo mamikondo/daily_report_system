@@ -136,3 +136,28 @@ tr.row0 {
 h1 a {
     color: #eeeeee;
 }
+
+table#report_list th{
+    font-weight:bold;
+    padding:10px 2%;
+}
+
+table#report_list .report_name{
+    weight:20%;
+    padding:10px 2%;
+}
+
+table#report_list .report_date{
+    weight:20%;
+
+}
+
+table#report_list .report_title{
+    weight:37%;
+
+}
+
+table#report_list .report_action{
+    weight:13%;
+
+}
