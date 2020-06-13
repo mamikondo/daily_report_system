@@ -8,6 +8,7 @@
             ・<c:out value="${error}" /><br />
         </c:forEach>
 
+
     </div>
 </c:if>
 <label for="code">社員番号</label><br />
@@ -28,6 +29,7 @@
     <option value="1"<c:if test="${employee.admin_flag == 1}"> selected</c:if>>管理者</option>
 </select>
 <br /><br />
+
 
 <input type="hidden" name="_token" value="${_token}" />
 <button type="submit">投稿</button>
