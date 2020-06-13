@@ -5,9 +5,10 @@
     <c:param name="content">
         <c:if test="${flush != null}">
             <div id="flush_success">
-                <c:out value="${flush}"></c:out>
+               <c:out value="${flush}"></c:out>
             </div>
         </c:if>
+
         <h2>日報　一覧</h2>
         <table id="report_list">
             <tbody>
@@ -16,8 +17,8 @@
                     <th class="report_date">日付</th>
                     <th class="report_title">タイトル</th>
                     <th class="report_action">操作</th>
-                </tr>
-                <c:forEach var="report" items="${reports}" varStatus="status">
+               </tr>
+               <c:forEach var="report" items="${reports}" varStatus="status">
                     <tr class="row${status.count % 2}">
                         <td class="report_name"><c:out value="${report.employee.name}" /></td>
                         <td class="report_date"><fmt:formatDate value='${report.report_date}' pattern='yyyy-MM-dd' /></td>
@@ -42,6 +43,7 @@
             </c:forEach>
         </div>
         <p><a href="<c:url value='/reports/new' />">新規日報の登録</a></p>
+
 
     </c:param>
 </c:import>
