@@ -62,8 +62,8 @@ public class TopPageIndexServlet extends HttpServlet {
 
 
         if(request.getSession().getAttribute("flush")!= null){
-            request.setAttribute("flush",request.getSession().getAttribute("flush"));
-            request.getSession().removeAttribute("flush");
+           request.setAttribute("flush",request.getSession().getAttribute("flush"));
+           request.getSession().removeAttribute("flush");
 
         }
 
