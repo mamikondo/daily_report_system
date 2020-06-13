@@ -17,7 +17,7 @@ import utils.DBUtil;
 /**
  * Servlet implementation class ReportsIndexServlet
  */
-@WebServlet(name = "reports/index", urlPatterns = { "/reports/index" })
+@WebServlet("/reports/index")
 public class ReportsIndexServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -42,12 +42,12 @@ public class ReportsIndexServlet extends HttpServlet {
             page = 1;
         }
         List<Report> reports = em.createNamedQuery("getAllReports", Report.class)
-                                     .setFirstResult(15 * (page - 1))
-                                     .setMaxResults(15)
-                                     .getResultList();
+                                  .setFirstResult(15 * (page - 1))
+                                  .setMaxResults(15)
+                                  .getResultList();
 
         long reports_count = (long)em.createNamedQuery("getReportsCount", Long.class)
-                                       .getSingleResult();
+                                     .getSingleResult();
 
         em.close();
 
@@ -62,4 +62,5 @@ public class ReportsIndexServlet extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/reports/index.jsp");
         rd.forward(request, response);
     }
+
 }
