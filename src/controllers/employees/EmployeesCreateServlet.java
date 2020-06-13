@@ -72,7 +72,7 @@ public class EmployeesCreateServlet extends HttpServlet {
                 em.persist(e);
                 em.getTransaction().commit();
                 em.close();
-                request.getSession().setAttribute("flush", "登録が完了しました。");
+               request.getSession().setAttribute("flush", "登録が完了しました。");
 
                 response.sendRedirect(request.getContextPath() + "/employees/index");
             }
